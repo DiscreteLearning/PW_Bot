@@ -1,0 +1,59 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: app not work
+  steps:
+  - intent: issue_related_to_app_classes
+  - action: utter_app_not_work
+
+- story: Select feature and explore
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Explore_Features  # Example user intent that leads to 'utter_greet_options'
+  - action: utter_about_pw # Your custom action to handle the user's selection
+
+- story: Select report the issue
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Report_the_issue  # Example user intent that leads to 'utter_greet_options'
+  - action: utter_report_issue 
+
+# stories:
+# - story: handle_order_issue
+#   steps:
+#     - intent: order_issue
+#     - action: action_resolve_issue
+
+# - story: handle_issue_not_resolved
+#   steps:
+#     - action: action_create_ticket

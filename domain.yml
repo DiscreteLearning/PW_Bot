@@ -1,0 +1,82 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - issue_related_to_app_classes
+  # - order_issue
+  # - playback_issue
+  # - batch_access_issue
+  - Explore_Features
+  - Report_the_issue
+
+responses:
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://www.youtube.com/embed/WnG6JKnorGU?si=uHStkzbnPhLcPPMw"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by PW."
+
+  utter_greet:
+  - text: |
+        Welcome to Vidyarthi Care. I am here to help you.
+        Please select an option below:
+    buttons:
+      - title: "Explore Features"
+        payload: "/Explore_Features"
+      - title: "Report the Issue"
+        payload: "/Report_the_issue"
+
+  utter_about_pw:
+    - text: |
+        Physics Wallah is India's top online ed-tech platform that provides affordable and comprehensive learning experience to students of classes 6 to 12 and all government exams and much more.
+        You can visit pw.live or you can download the app from the Play Store or the Apple Store.
+
+
+  utter_subsequent_options:
+    - text: "Would you like to know more?"
+      buttons:
+        - title: "Yes"
+          payload: "/yes1"
+        - title: "No"
+          payload: "/no1"
+
+  utter_resolve_issue:
+    - text: "Here are some general suggestions for resolving this issue."
+
+  utter_report_issue:
+    - text: |
+        Sorry for the inconvenience. Let's try to troubleshoot together
+        So I want to know which plateform you are facing issue
+      buttons:
+        - title: "Web"
+          payload: "/Web"
+        - title: "App"
+          payload: "/App"
+        - title: "Ios"
+          payload: "/Ios"
+
+  utter_app_not_work:
+    - text: "To resolve issues with the app not working, you can try the following steps: press long on the app icon -> go to app info -> clear cache data."
+
+actions:
+  - action_handle_option_selection
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
