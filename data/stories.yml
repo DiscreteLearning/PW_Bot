@@ -33,6 +33,9 @@ stories:
   steps:
   - intent: issue_related_to_app_classes
   - action: utter_app_not_work
+  - action: utter_solution_options
+  - intent: yes_type
+  - action: utter_related_to_yes
 
 - story: Select feature and explore
   steps:
@@ -41,12 +44,54 @@ stories:
   - intent: Explore_Features  # Example user intent that leads to 'utter_greet_options'
   - action: utter_about_pw # Your custom action to handle the user's selection
 
-- story: Select report the issue
+- story: Select report the issue for app classes
   steps:
   - intent: greet
   - action: utter_greet
   - intent: Report_the_issue  # Example user intent that leads to 'utter_greet_options'
-  - action: utter_report_issue 
+  - action: utter_report_issue
+  - intent: issue_related_to_app_classes
+  - action: utter_app_not_work
+  - action: utter_solution_options
+  - intent: yes_type
+  - action: utter_related_to_yes
+
+- story: Select report the issue for permission
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Report_the_issue  # Example user intent that leads to 'utter_greet_options'
+  - action: utter_report_issue
+  - intent: issue_related_to_permission
+  - action: utter_related_to_permission
+  - action: utter_solution_options
+  - intent: yes_type
+  - action: utter_related_to_yes
+
+- story: Select report the issue for date and time
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Report_the_issue  # Example user intent that leads to 'utter_greet_options'
+  - action: utter_report_issue
+  - intent: issue_related_to_date_and_time
+  - action: utter_related_to_date_and_time
+  - action: utter_solution_options
+  - intent: yes_type
+  - action: utter_related_to_yes
+
+- story: Select report the issue for network
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Report_the_issue  # Example user intent that leads to 'utter_greet_options'
+  - action: utter_report_issue
+  - intent: issue_related_to_network
+  - action: utter_related_to_Network
+  - action: utter_solution_options
+  - intent: yes_type
+  - action: utter_related_to_yes
+
 
 # stories:
 # - story: handle_order_issue

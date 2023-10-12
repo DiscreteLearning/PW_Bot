@@ -32,8 +32,6 @@ nlu:
 
 - intent: affirm
   examples: |
-    - yes
-    - y
     - indeed
     - of course
     - that sounds good
@@ -95,6 +93,49 @@ nlu:
     - App not working
     - App not opening
     - not able to login
+    - White screen loading while opening app
+    - App not responding 
+    - app nahi chal raha hai
+    - not able to access batch
+    - app open nahi hota bas load hota rahta hai
+    - app running slow
+    - app not working on evening
+    - not able to take class on morning
+    - not able to take class on specific time
+    - kabhi kabhi lecture nahi chalta 
+    - Sir chat is not working
+    - its giving Some error occured error  
+
+- intent: issue_related_to_permission
+  examples: |
+    - PDF not downloading 
+    - Apps get a blank white loading screen after OTP enters
+    - Video lectures not downloading
+
+- intent: issue_related_to_date_and_time
+  examples: |
+    - not able to login on pw web
+    - lecture not playing sometime 
+    - videos lag in web 
+
+- intent: issue_related_to_network
+  examples: |
+    - App is not opeing in Idea Network
+    - App is not opeing in Vodafone Network
+    - App is not opeing in Airtel Network
+    - App is not opeing in Jio Network
+    - Idea ke network pr class nahi le pa raha
+    - Airtel ke network pr class nahi le pa raha
+    - Jio ke network pr class nahi le pa raha
+    - Vodafone ke network pr class nahi le pa raha
+    - App is running slow on Idea network
+    - App is running slow on Jio network
+    - App is running slow on Vodafone network
+    - App is running slow on Airtel network
+    - app is not working on mobile network
+    - App is not working on mobile network
+
+- intent: 
 
 - intent: order_issue
   examples: |
@@ -122,7 +163,11 @@ nlu:
     - Report the Issue
     - Report the issue
     - report the issue
-    
+
+- intent: yes_type
+  examples: |
+    - Yes
+    - y
 # - entity: order_id
 #   type: text
 

@@ -14,6 +14,10 @@ intents:
   # - batch_access_issue
   - Explore_Features
   - Report_the_issue
+  - issue_related_to_network
+  - issue_related_to_date_and_time
+  - issue_related_to_permission
+  - yes_type
 
 responses:
   utter_cheer_up:
@@ -48,8 +52,8 @@ responses:
         You can visit pw.live or you can download the app from the Play Store or the Apple Store.
 
 
-  utter_subsequent_options:
-    - text: "Would you like to know more?"
+  utter_solution_options:
+    - text: "Was it Helful?"
       buttons:
         - title: "Yes"
           payload: "/yes1"
@@ -62,17 +66,36 @@ responses:
   utter_report_issue:
     - text: |
         Sorry for the inconvenience. Let's try to troubleshoot together
-        So I want to know which plateform you are facing issue
-      buttons:
-        - title: "Web"
-          payload: "/Web"
-        - title: "App"
-          payload: "/App"
-        - title: "Ios"
-          payload: "/Ios"
+        Please Ask Your Issues
 
   utter_app_not_work:
-    - text: "To resolve issues with the app not working, you can try the following steps: press long on the app icon -> go to app info -> clear cache data."
+    - text: "To resolve issue you can try the following steps: press long on the app icon -> go to app info -> clear cache data."
+    - text: "Was it Helful?"
+      buttons:
+        - title: "Yes"
+          payload: "/yes1"
+        - title: "No"
+          payload: "/no1"
+  
+  utter_related_to_permission:
+    - text: "To resolve issue press long on app icon -> go to app info -> check permission -> give permission of File and media , Location / if already there still deny and give again"
+
+  utter_related_to_date_and_time:
+    - text: "To resolve issue check date and time setting of your App, go to setting -> search date and time -> select set automatically, if already then leave it as it is"
+  
+  utter_related_to_Network:
+    - text: "To resolve issue apply 
+        1. Go to mobile Setting and search or DNS 
+        2. Go inside Private DNS there will be option 'Private DNS provide hostname' something 
+        3. Tap on that and write 'dns.google' and save .
+        4.  restart your App it will work
+        if have confusion please watch this 
+        <a href='https://drive.google.com/file/d/1icytraFqqwK1uXEdt5LDNw3aI96G-U3O/view?usp=drive_link'>Video</a>"
+
+  utter_related_to_yes:
+   - text: "Thanks for contacting us. Have a Nice Day"
+        
+  
 
 actions:
   - action_handle_option_selection

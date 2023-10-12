@@ -202,11 +202,6 @@ function setBotResponse(response) {
         if (response.length < 1) {
             //if there is no response from Rasa, send  fallback message to the user
             // var fallbackMsg = "I am facing some issues, please try again later!!!";
-            var welcomeMsg = "Hello Bachooo... "
-            var BotResponse = '<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">' + welcomeMsg + '</p><div class="clearfix"></div>';
-
-            $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
-            scrollToBottomOfResults();
         } else {
 
             //if we get response from Rasa
