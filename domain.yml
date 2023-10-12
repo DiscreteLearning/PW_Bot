@@ -59,6 +59,7 @@ responses:
           payload: "/yes1"
         - title: "No"
           payload: "/no1"
+      
 
   utter_resolve_issue:
     - text: "Here are some general suggestions for resolving this issue."
@@ -90,12 +91,10 @@ responses:
         3. Tap on that and write 'dns.google' and save .
         4.  restart your App it will work
         if have confusion please watch this 
-        <a href='https://drive.google.com/file/d/1icytraFqqwK1uXEdt5LDNw3aI96G-U3O/view?usp=drive_link'>Video</a>"
+        <a target='_blank' href='https://drive.google.com/file/d/1icytraFqqwK1uXEdt5LDNw3aI96G-U3O/view?usp=drive_link'>Video</a>"
 
   utter_related_to_yes:
    - text: "Thanks for contacting us. Have a Nice Day"
-        
-  
 
 actions:
   - action_handle_option_selection

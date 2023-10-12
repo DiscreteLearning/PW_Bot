@@ -9,6 +9,10 @@ body {
 .eshimg{
   width:25%;
 }
+
+.material-icons{
+    color: black;
+}
 .widget {
     display: none;
     width: 350px;
@@ -23,21 +27,38 @@ body {
 
 .chat_header {
     height: 65px;
-    background: rgb(90, 23, 238);
     border-radius: 10px 10px 0px 0px;
     padding: 5px;
     font-size: 20px;
+    /* border-bottom: 1px solid gray; */
+    webkit-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.34);
+-moz-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.34);
+box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.34);
+position: relative;
 }
 
 .chat_header_img{
-  margin-bottom: 15px;
+  margin-top: 15px; 
+  /* display: flex;*/
+  
 }
 .imgs{
-  width:75px;
+  width:40px;
+  margin-top: 12px;
+  margin-left: 10px;
 }
 .chat_header_title {
-    color: white;
-    margin-left: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: bold;
+
+}
+
+.green-text{
+    color: greenyellow;
+
 }
 
 .chats {
